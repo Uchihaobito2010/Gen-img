@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "name": "ai-image-api",
+  "public": true,
+  "builds": [
+    {
+      "src": "api/generate.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/generate",
+      "dest": "/api/generate.js"
+    },
+    {
+      "src": "/generate",
+      "dest": "/api/generate.js"
+    },
+    {
+      "src": "/",
+      "dest": "/api/generate.js"
+    },
+    {
+      "src": "/ai",
+      "dest": "/api/generate.js"
+    }
+  ],
+  "env": {
+    "SERVICE_OWNER": "Your Name"
+  }
+}
